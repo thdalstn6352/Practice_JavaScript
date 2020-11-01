@@ -61,6 +61,10 @@ input:focus {
   text-align: center;
 }
 
+.js-form-list .js-toDoForm {
+  text-align: center;
+}
+
 .js-toDoList {
   padding: 0;
   list-style: none;
@@ -85,6 +89,7 @@ button {
   background: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 .clicked {
   color: #7f8c8d;
