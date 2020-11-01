@@ -70,7 +70,7 @@ function loadToDos() {
   }
   saveToDos();
 }
- 
+
 function init() {
   loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
