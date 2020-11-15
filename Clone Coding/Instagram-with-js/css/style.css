@@ -123,6 +123,7 @@ body {
 
 #main-container .inner-main {
   width: 80%;
+  display: flex;
 }
 
 #main-container .inner-main .contents-box .contents {
@@ -317,4 +318,37 @@ body {
   ~ .upload-btn {
   pointer-events: initial;
   opacity: 1;
+}
+
+#main-container .inner-main .side-box {
+  margin-left: 20px;
+  width: 293px;
+  /* height: 300px;
+  background: rgba(0, 0, 0, 0.15); */
+}
+
+#main-container .inner-main .side-box .user-profile {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-medium);
+}
+#main-container .inner-main .side-box .profile-thumb {
+  margin-right: 10px;
+}
+#main-container .inner-main .side-box .profile-thumb img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--black-color);
+}
+
+#main-container .inner-main .side-box .user-profile .detail .id {
+  font-weight: 600;
+  font-size: var(--font-medium);
+}
+
+#main-container .inner-main .side-box .user-profile .detail .name {
+  font-weight: 400;
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
 }
