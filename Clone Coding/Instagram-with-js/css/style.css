@@ -18,6 +18,10 @@
   --font-micro: 10px;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
 body {
   background-color: #fafafa;
 }
@@ -77,7 +81,7 @@ body {
   width: 185px;
   height: 28px;
   background: #fafafa;
-  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 3px;
   padding: 3px 30px;
   color: #999;
@@ -89,8 +93,8 @@ body {
 
 #header .search-box .fake-field {
   position: absolute;
-  left: 100px;
-  top: 18px;
+  left: 65px;
+  top: 50%;
   transform: translate(-50%, -50%);
   color: #999;
 }
@@ -108,7 +112,7 @@ body {
 }
 
 #header .search-box #search-field:focus ~ .fake-field > img {
-  transform: translate(-80px);
+  transform: translate(-50px);
 }
 
 #header .search-box #search-field:focus {
@@ -116,7 +120,7 @@ body {
 }
 
 #main-container {
-  padding-top: 130px;
+  margin-top: 85px;
   display: flex;
   justify-content: center;
 }
@@ -124,6 +128,52 @@ body {
 #main-container .inner-main {
   width: 80%;
   display: flex;
+}
+
+#main-container .inner-main .main-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-contents .story-box {
+  width: 614px;
+  height: 84px;
+  margin-bottom: 24px;
+  padding: 16px 10px;
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.story-box .story-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+.story-box .story-list .story {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.story-box .story-list .story > span {
+  font-size: var(--font-small);
+  color: var(--grey-dark-color);
+}
+
+.story-box .story-list .story img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 #main-container .inner-main .contents-box .contents {
@@ -331,6 +381,7 @@ body {
   display: flex;
   align-items: center;
   font-size: var(--font-medium);
+  margin-bottom: 10px;
 }
 #main-container .inner-main .side-box .profile-thumb {
   margin-right: 10px;
@@ -345,10 +396,41 @@ body {
 #main-container .inner-main .side-box .user-profile .detail .id {
   font-weight: 600;
   font-size: var(--font-medium);
+  margin-bottom: 5px;
 }
 
 #main-container .inner-main .side-box .user-profile .detail .name {
   font-weight: 400;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
+}
+
+#main-container .inner-main .side-box > article {
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  margin-bottom: 20px;
+  width: 291px;
+  font-size: var(--font-medium);
+  color: var(--black-color);
+  font-weight: bold;
+  background-color: var(--white-color);
+}
+
+#main-container .inner-main .side-box > article > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  color: var(--grey-dark-color);
+}
+
+#main-container .inner-main .side-box > article > header .more {
+  font-size: var(--font-small);
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+#main-container .inner-main .side-box .story .scroll-inner .thumb-user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
