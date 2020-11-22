@@ -28,12 +28,13 @@ body {
 
 #header {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   z-index: 999;
   background: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#header.scroll {
+  position: fixed;
 }
 
 #header .inner-header {
@@ -68,9 +69,15 @@ body {
   display: flex;
 }
 
-#header .inner-header .etc-icon .home-icon i {
-  width: 40px;
-  height: 40px;
+#header .inner-header .etc-icon i {
+  font-size: 22px;
+  color: black;
+}
+
+#header .inner-header .etc-icon .profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 #header .inner-header .search-box .fake-field img {
@@ -79,7 +86,7 @@ body {
 }
 
 #search-field {
-  width: 185px;
+  width: 215px;
   height: 28px;
   background: #fafafa;
   border: 1px solid rgba(0, 0, 0, 0.09);
@@ -94,7 +101,7 @@ body {
 
 #header .search-box .fake-field {
   position: absolute;
-  left: 65px;
+  left: 80px;
   top: 50%;
   transform: translate(-50%, -50%);
   color: #999;
@@ -104,8 +111,16 @@ body {
   position: relative;
 }
 
+#header .etc-icon {
+  display: flex;
+  align-items: center;
+}
+#header .etc-icon .icon:last-child {
+  margin-right: 0;
+}
+
 #header .etc-icon .icon {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 #header .search-box #search-field:focus::placeholder {
@@ -121,7 +136,7 @@ body {
 }
 
 #main-container {
-  padding-top: 85px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
 }
@@ -141,6 +156,7 @@ body {
 
 .main-contents .story-box {
   max-width: 614px;
+  width: 98vw;
   margin-bottom: 24px;
   padding: 16px 10px;
   background: #fafafa;
@@ -153,6 +169,7 @@ body {
 .main-contents .story-box .profile-thumb {
   height: 84px;
   display: flex;
+  overflow: hidden;
 }
 
 .main-contents .story-box .story-list {
@@ -273,6 +290,47 @@ body {
   cursor: pointer;
 }
 
+.main-contents
+  .contents-box
+  .contents
+  .contents-function
+  .contents-left-btn
+  > div
+  i {
+  font-size: 24px;
+}
+
+.main-contents
+  .contents-box
+  .contents
+  .contents-function
+  .contents-left-btn
+  .heart-btn {
+  background-image: url('../images/instagram_heart.png');
+  background-size: cover;
+  background-position: center;
+  width: 24px;
+  height: 24px;
+}
+
+.main-contents
+  .contents-box
+  .contents
+  .contents-function
+  .contents-left-btn
+  .heart-btn.on {
+  background-image: url('../images/heart_active.png');
+}
+.main-contents
+  .contents-box
+  .contents
+  .contents-function
+  .contents-right-btn
+  > div
+  i {
+  font-size: 24px;
+}
+
 .main-contents .contents-box .contents .like {
   padding: 5px 10px;
   color: var(--black-color);
@@ -299,6 +357,12 @@ body {
 .main-contents .contents-box .contents .comment-container .small-heart {
   cursor: pointer;
 }
+.main-contents .contents-box .contents .comment-container .small-heart.on {
+  background-image: url('../images/heart_active.png');
+  background-size: 16px;
+  background-position: center;
+}
+
 .main-contents .contents-box .contents .timer {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
@@ -349,6 +413,11 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.side-box.scroll {
+  position: fixed;
+  top: 85px;
 }
 
 .side-box .user-profile {
